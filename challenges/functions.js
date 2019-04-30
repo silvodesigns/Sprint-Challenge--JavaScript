@@ -28,17 +28,23 @@ function multiply(one,two){
   return one * two;
 
 }
+
+function greeting(first, last){
+  return `Hello ${first} ${last} it was nice to meet you!`;
+}
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+  consume(2,2,add); // 4
+  consume(10,16,multiply); // 160
+  consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Because the variable const was declared in the same block level that the function was defined in.
+// so when we console.log internal in the nestedFuction it does not find it in its functions scope
+// so it reaches outward one level sand finds internal
 
 
 const external = "I'm outside the function";
