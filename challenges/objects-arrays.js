@@ -111,6 +111,10 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+for(i = 0; i < graduates.length; i++){
+  contactInfo[i] = `${graduates[i].first_name}  ${graduates[i].email}`;
+ 
+ }
 console.log(contactInfo);
 
 
@@ -141,6 +145,10 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(function(element){
+ animalNames.push(`Name: ${element.animal_name}, Scientific:  ${element.scientific_name}`);
+
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
