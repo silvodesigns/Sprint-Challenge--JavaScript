@@ -75,9 +75,34 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
+
+
+
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+var universities = [];
+for(i = 0; i < graduates.length; i++){
+ universities[i] = graduates[i].university;
+
+}
+
+function bubbleSort(array) {
+  var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+
+  return array;
+}
+bubbleSort(universities);
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
